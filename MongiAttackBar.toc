@@ -1,0 +1,9 @@
+## Interface: 11200
+## Title: MongiAttackBar
+## Notes: Actually good swingtimer
+## Author: Mongidawg
+## SavedVariables: MongiAttackBar
+## Version: 1.0.1
+
+MongiAttackBar.lua
+MongiAttackBar.xml

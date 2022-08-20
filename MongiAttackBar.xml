@@ -1,0 +1,81 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+<Statusbar name="MongiAttackBar" drawLayer="BORDER" parent="UIParent" virtual="true" toplevel="true">
+	<Size>
+		<AbsDimension x="150" y="16" />
+	</Size>
+	<Anchors>
+		<Anchor point="CENTER">
+			<Offset>
+				<AbsDimension x="0" y="0"/>
+			</Offset>
+		</Anchor>
+	</Anchors>
+	<Layers>
+		<Layer level="BACKGROUND">
+			<Texture setAllPoints="true">
+				<Color r="0" g="0" b="0" a=".5"/>
+			</Texture>
+		</Layer>
+		<Layer level="ARTWORK">
+		<FontString name="$parentText" inherits="GameFontHighlight">
+          <Size>
+            <AbsDimension x="150" y="16"/>
+          </Size>
+          <Anchors>
+            <Anchor point="TOP">
+              <Offset>
+                <AbsDimension x="0" y="0"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+		<Texture name="$parentBorder" file="Interface\CastingBar\UI-CastingBar-Border">
+          <Size>
+            <AbsDimension x="202" y="56"/>
+          </Size>
+          <Anchors>
+            <Anchor point="CENTER">
+              <Offset>
+                <AbsDimension x="0" y="0"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </Texture>
+		</Layer>
+		<Layer level="OVERLAY">
+				<Texture name="$parentSpark" file="Interface\CastingBar\UI-CastingBar-Spark" alphaMode="ADD">
+					<Size>
+						<AbsDimension x="32" y="32"/>
+					</Size>
+					<Anchors>
+						<Anchor point="CENTER"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+	</Layers>
+	<BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+	<!-- <BarColor r="0" g=".5" b="1"/> -->
+	<BarColor r="1" g=".7" b="0"/>
+</Statusbar>
+
+<StatusBar name="MongiAttackBarMH" inherits="MongiAttackBar" parent="UIParent" hidden="true">
+	<Anchors>
+		<Anchor point="CENTER">
+			<Offset>
+				<AbsDimension x="0" y="-150"/>
+			</Offset>
+		</Anchor>
+	</Anchors>
+</StatusBar>
+<StatusBar name="MongiAttackBarOH" inherits="MongiAttackBar" parent="UIParent" hidden="true">
+	<Anchors>
+		<Anchor point="CENTER">
+			<Offset>
+				<AbsDimension x="0" y="-176"/>
+			</Offset>
+		</Anchor>
+	</Anchors>
+</StatusBar>
+</Ui>
